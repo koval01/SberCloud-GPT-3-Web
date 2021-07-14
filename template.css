@@ -32,3 +32,10 @@ span {
 .btn-primary {
   border-color: #954eff;
 }
+.btn-primary:hover {
+  border-color: #954eff;
+}
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+  border-color: #9147ff;
+  box-shadow: 0 0 0 0.25rem rgb(145 71 255 / 67%);
+}
