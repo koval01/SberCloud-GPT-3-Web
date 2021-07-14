@@ -48,4 +48,6 @@ span {
   background-color: #000!important;
   border-color: #a970ff!important;
   color: #fff!important;
+  box-shadow: none;
+  border-radius: 8px;
 }
