@@ -39,3 +39,12 @@ span {
   border-color: #9147ff;
   box-shadow: 0 0 0 0.25rem rgb(145 71 255 / 67%);
 }
+.form-control {
+  border: none;
+  color: #fff;
+}
+.form-control:focus {
+  background-color: #000;
+  border-color: #a970ff;
+  color: #fff
+}
