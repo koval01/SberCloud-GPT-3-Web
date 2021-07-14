@@ -42,6 +42,7 @@ span {
 .form-control {
   border: none!important;
   color: #fff!important;
+  background-color: #464649!important;
 }
 .form-control:focus {
   background-color: #000!important;
