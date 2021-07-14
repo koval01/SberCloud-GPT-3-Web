@@ -29,3 +29,6 @@ body {
 span {
   color: #efeff1;
 }
+.btn-primary {
+  border-color: #954eff;
+}
