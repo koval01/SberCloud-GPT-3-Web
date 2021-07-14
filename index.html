@@ -18,7 +18,7 @@
     </head>
     <body>
         <div class="col-lg-8 mx-auto p-3 py-md-5" style="padding-top:1rem!important">
-            <header class="d-flex align-items-center pb-3 mb-5">
+            <header class="d-flex align-items-center pb-3 mb-5" style="user-select:none">
                 <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
                     <span class="fs-4">story.q-writer.com</span>
                 </a>
@@ -31,7 +31,8 @@
                 <div class="mb-5" style="text-align:center">
                     <button id="generate_continue_button" onclick="generate_continue()" class="btn btn-primary btn-lg px-4">Продолжить <span style="display:none" class="spinner-border text-light spinner_wait__"></span></button>
                 </div>
-                <div id="result_continue_block">
+                <p class="text-muted" style="font-weight:600;font-size:1em!important">Нажмите на одну из записей, чтобы перенести её в поле</p>
+                <div id="result_continue_block" style="user-select:none">
                     <figure class="border-bottom" onclick="select_story(this)">
                       <blockquote class="blockquote">
                         <p>Нейросеть не знает, что говорит, и может сказать всякое — если что, не обижайтесь. Распространяя получившиеся тексты, помните об ответственности. Также убедитесь, что вам уже исполнилось 54 года.</p>
