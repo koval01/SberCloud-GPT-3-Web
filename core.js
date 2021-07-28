@@ -21,6 +21,7 @@ function select_story(el) {
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
+/* copied from awse.us code */
 function edit_query_string_q(data) {
   var queryParams = new URLSearchParams(window.location.search);
   queryParams.set("q", data);
@@ -28,18 +29,18 @@ function edit_query_string_q(data) {
 }
 
 function getParameterByName(name, url = window.location.href) {
-    try {
-        name = name.replace(/[\[\]]/g, '\\$&');
-        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, ' '));
-    } catch {
-        alert("Ошибка парсинга адресной строки.");
-    }
+  try {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  } catch {
+      alert("Ошибка парсинга адресной строки.");
+  }
 }
-
+/* finish awse.us code 👨‍💻 */
 
 function format_result(server_response) {
   let text = (server_response.predictions).replace("\n", "<br/>");
