@@ -19,7 +19,7 @@ function select_story(el) {
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
 function format_result(server_response) {
-  let text = server_response.predictions;
+  let text = (server_response.predictions).replace("\n", "<br/>");
   let html_result = `<figure class="border-bottom" onclick="select_story(this)"><blockquote class="blockquote"><b>${text}</b></blockquote><figcaption class="blockquote-footer">SberCloud</figcaption></figure>`;
   return html_result;
 }
