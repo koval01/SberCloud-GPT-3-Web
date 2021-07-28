@@ -5,16 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Генератор историй">
         <meta name="author" content="Yaroslav Koval">
+        
         <title>SberCloud GPT-3 Web</title>
         <link href="./template.css" rel="stylesheet">
+        
         <style>
             .bd-placeholder-img{font-size:1.125rem;text-anchor:middle;-webkit-user-select:none;-moz-user-select:none;user-select:none}@media (min-width:768px){.bd-placeholder-img-lg{font-size:3.5rem}}::-webkit-scrollbar{width:15px}.disable-track-aware::-webkit-scrollbar{width:0;background:0 0}::-webkit-scrollbar-track{background:0 0}::-webkit-scrollbar-thumb{background:#939393;border-radius:8px;border:4px solid #0e0e10}::-webkit-scrollbar-thumb:hover{background:#7c7c7c}
         </style>
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" integrity="sha512-usVBAd66/NpVNfBge19gws2j6JZinnca12rAe2l+d+QkLU9fiG02O1X8Q6hepIpr/EYKZvKx/I9WsnujJuOmBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
         <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
         <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js" integrity="sha512-72WD92hLs7T5FAXn3vkNZflWG6pglUDDpm87TeQmfSg8KnrymL2G30R7as4FmTwhgu9H7eSzDCX3mjitSecKnw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    </head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+    </head>
+    
     <body>
         <div class="col-lg-8 mx-auto p-3 py-md-5" style="padding-top:1rem!important">
             <header class="d-flex align-items-center pb-3 mb-5" style="user-select:none">
@@ -22,17 +29,21 @@
                     <span class="fs-4">SberCloud GPT-3 Web</span>
                 </a>
             </header>
+            
             <main>
                 <div class="form-floating" style="margin-bottom:2em">
                   <textarea class="form-control" style="height:300px;resize:none" placeholder="Начало истории было таким..." id="floatingTextarea text_for_story_start"></textarea>
                   <label for="floatingTextarea">Начало истории было таким...</label>
                 </div>
+                
                 <div class="mb-5" style="text-align:center">
                     <button id="generate_continue_button" onclick="generate_continue()" class="btn btn-primary btn-lg px-4">Продолжить <span style="display:none" class="spinner-border text-light spinner_wait__"></span></button>
                 </div>
+                
                 <p class="text-muted" id="prompt_select_story" style="font-weight:600;font-size:1em!important;display:none;transition:margin-top 1s;margin-top:-2em">Нажмите на одну из записей, чтобы перенести её в поле</p>
                 <div id="result_continue_block" style="user-select:none"></div>    
             </main>
+            
             <footer class="pt-5 my-5 text-muted">
                 More about the neural network <a href="https://sbercloud.ru/ru/warp/gpt-3" target="_blank">SberCloud Page</a><br/>
                 Web App Developed by <a href="https://t.me/koval_yaroslav" target="_blank">Koval Yaroslav</a><br/>
@@ -40,5 +51,7 @@
             </footer>
         </div>
         <script src="./core.js"></script>
+        
     </body>
+    
 </html>
