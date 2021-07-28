@@ -54,8 +54,9 @@ function generate_continue() {
   const url = "https://api.aicloud.sbercloud.ru/public/v1/public_inference/gpt3/predict";
   const button = $("#generate_continue_button"),
       loader = button.find("span");
-    
-  var txt_c = $("textarea").val();
+  
+  let text_area = $("textarea");
+  let txt_c = text_area.val();
   
   deleteAllCookies();
 
@@ -74,6 +75,7 @@ function generate_continue() {
     beforeSend: function () {
       loader.css("display", "inline-block");
       button.prop('disabled', true);
+      text_area.prop("disabled", true)
     },
     success: function (o) {
       display_hint();
@@ -82,6 +84,7 @@ function generate_continue() {
           
       loader.css("display", "none");
       button.prop('disabled', false);
+      text_area.prop('disabled', false);
       block.prepend(format_result(o));
           
       document.getElementById('result_continue_block').scrollIntoView({
