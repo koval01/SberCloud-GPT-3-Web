@@ -19,18 +19,18 @@
 }
 p {
     font-size: 18px;
-    color: #dcdcdc;
+    color: #dcdcdc!important;
 }
 b {
     font-size: 18px;
-    color: #dcdcdc;
+    color: #dcdcdc!important;
 }
 i {
     font-size: 18px;
-    color: #dcdcdc;
+    color: #dcdcdc!important;
 }
 button {
-    background: #9147ff;
+    background: #9147ff!important;
 }
 body {
     background: #0e0e10!important;
