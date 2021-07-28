@@ -25,6 +25,7 @@ function display_hint() {
 function clear_text_area() {
   $("textarea").val("");
   edit_query_string("");
+  $.notify('Поле очищено!', notify_config);
 }
 
 function copy_share_link() {
