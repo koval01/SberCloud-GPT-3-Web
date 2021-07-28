@@ -1,8 +1,3 @@
-function fix_response(text) {
-  let re = '';
-  let errors =  text.match(re);
-  
-}
 function deleteAllCookies() {
     var cookies = document.cookie.split(";");
 
