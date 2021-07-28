@@ -20,7 +20,7 @@ function clear_text_area() {
 }
 
 function copy_share_link() {
-  $.notify('ok', {
+  $.notify('Ссылка скопирована!', "info", {
   });
 }
 
