@@ -1,3 +1,10 @@
+const notify_config = {
+  autoHideDelay: 5000,
+  autoHide: true,
+  globalPosition: 'bottom right',
+  clickToHide: true,
+ };
+
 function deleteAllCookies() {
   var cookies = document.cookie.split(";");
 
@@ -20,8 +27,7 @@ function clear_text_area() {
 }
 
 function copy_share_link() {
-  $.notify('Ссылка скопирована!', "info", {
-  });
+  $.notify('Ссылка скопирована!', "info", notify_config);
 }
 
 function select_story(el) {
