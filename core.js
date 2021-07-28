@@ -22,6 +22,7 @@ function select_story(el) {
 }
 
 /* copied from awse.us code */
+
 function edit_query_string_q(data) {
   var queryParams = new URLSearchParams(window.location.search);
   queryParams.set("q", data);
@@ -40,6 +41,7 @@ function getParameterByName(name, url = window.location.href) {
       alert("Ошибка парсинга адресной строки.");
   }
 }
+
 /* finish awse.us code 👨‍💻 */
 
 function format_result(server_response) {
@@ -93,3 +95,12 @@ function generate_continue() {
     },
   });
 }
+
+$(document).ready(function() {
+  let start_text = getParameterByName('start');
+  
+  if(start_text) {
+    $("textarea").val(start_text);
+    generate_continue();
+  }
+});
