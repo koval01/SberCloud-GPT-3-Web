@@ -28,7 +28,17 @@ function clear_text_area() {
   $.notify('Поле очищено!', notify_config);
 }
 
+function copyToClipboard(text) {
+  var input = document.body.appendChild(document.createElement("input"));
+  input.value = text;
+  input.focus();
+  input.select();
+  document.execCommand('copy');
+  input.parentNode.removeChild(input);
+}
+
 function copy_share_link() {
+  copyToClipboard(window.location.href);
   $.notify('Ссылка скопирована!', notify_config);
 }
 
