@@ -1,5 +1,5 @@
 const notify_config = {
-  autoHideDelay: 5000,
+  autoHideDelay: 3000,
   autoHide: true,
   globalPosition: 'bottom right',
   clickToHide: true,
