@@ -14,6 +14,10 @@ function display_hint() {
   hint.css({"display": "inline-block", "margin-top": "0"});
 }
 
+function clear_text_area() {
+  $("textarea").val("");
+}
+
 function select_story(el) {
   let jthis = jQuery(el);
   let text = jthis.find("blockquote").text();
