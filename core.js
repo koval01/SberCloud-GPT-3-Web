@@ -23,9 +23,9 @@ function select_story(el) {
 
 /* copied from awse.us code */
 
-function edit_query_string_q(data) {
+function edit_query_string(data, name="start") {
   var queryParams = new URLSearchParams(window.location.search);
-  queryParams.set("q", data);
+  queryParams.set(name, data);
   history.replaceState(null, null, "?" + queryParams.toString());
 }
 
@@ -98,6 +98,11 @@ function generate_continue() {
     },
   });
 }
+
+$('textarea').on('input', function() {
+  let text = $("textarea").val();
+  edit_query_string(text);
+});
 
 $(document).ready(function() {
   let start_text = getParameterByName('start');
