@@ -18,61 +18,61 @@
         no-repeat center center/100% auto;
 }
 p {
-    font-size: 18px !important;
-    color: #dcdcdc !important;
+    font-size: 18px;
+    color: #dcdcdc;
 }
 b {
-    font-size: 18px !important;
-    color: #dcdcdc !important;
+    font-size: 18px;
+    color: #dcdcdc;
 }
 i {
-    font-size: 18px !important;
-    color: #dcdcdc !important;
+    font-size: 18px;
+    color: #dcdcdc;
 }
 button {
-    background: #9147ff !important;
+    background: #9147ff;
 }
 body {
-    background: #0e0e10 !important;
+    background: #0e0e10;
 }
 span {
-    color: #efeff1 !important;
+    color: #efeff1;
 }
 .btn-primary {
-    border-color: #954eff !important;
+    border-color: #954eff;
 }
 .btn-primary:hover {
-    border-color: #954eff !important;
+    border-color: #954eff;
 }
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
-    border-color: #9147ff !important;
-    box-shadow: 0 0 0 0.25rem rgb(145 71 255 / 67%) !important;
+    border-color: #9147ff;
+    box-shadow: 0 0 0 0.25rem rgb(145 71 255 / 67%);
 }
 .form-control {
-    border: none !important;
-    color: #fff !important;
-    background-color: #464649 !important;
+    border: none;
+    color: #fff;
+    background-color: #464649;
 }
 .form-control:focus {
-    background-color: #000 !important;
-    color: #fff !important;
+    background-color: #000;
+    color: #fff;
     box-shadow: none;
     border-radius: 8px;
-    border: 3px solid #a970ff !important;
+    border: 3px solid #a970ff;
 }
 label {
-    color: #fff !important;
+    color: #fff;
 }
 .spinner_wait__ {
-    font-size: 12px !important;
-    width: 25px !important;
-    height: 25px !important;
-    vertical-align: -0.3em !important;
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    vertical-align: -0.3em;
 }
 a {
-    color: #bdbdbd !important;
+    color: #bdbdbd;
 }
 .a:hover {
-    color: #e6e6e6 !important;
+    color: #e6e6e6;
 }
