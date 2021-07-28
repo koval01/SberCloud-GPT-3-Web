@@ -18,15 +18,15 @@
         no-repeat center center/100% auto;
 }
 p {
-    font-size: 18px;
+    font-size: 18px!important;
     color: #dcdcdc!important;
 }
 b {
-    font-size: 18px;
+    font-size: 18px!important;
     color: #dcdcdc!important;
 }
 i {
-    font-size: 18px;
+    font-size: 18px!important;
     color: #dcdcdc!important;
 }
 button {
@@ -47,7 +47,7 @@ span {
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
     border-color: #9147ff!important;
-    box-shadow: 0 0 0 0.25rem rgb(145 71 255 / 67%);
+    box-shadow: 0 0 0 0.25rem rgb(145 71 255 / 67%)!important;
 }
 .form-control {
     border: none!important;
@@ -65,10 +65,10 @@ label {
     color: #fff!important;
 }
 .spinner_wait__ {
-    font-size: 12px;
-    width: 25px;
-    height: 25px;
-    vertical-align: -0.3em;
+    font-size: 12px!important;
+    width: 25px!important;
+    height: 25px!important;
+    vertical-align: -0.3em!important;
 }
 a {
     color: #bdbdbd!important;
