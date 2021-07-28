@@ -19,6 +19,11 @@ function clear_text_area() {
   edit_query_string("");
 }
 
+function copy_share_link() {
+  $.notify('ok', {
+  });
+}
+
 function select_story(el) {
   let jthis = jQuery(el);
   let text = jthis.find("blockquote").text();
