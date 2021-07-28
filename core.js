@@ -45,7 +45,7 @@ function copy_share_link() {
 function select_story(el) {
   let jthis = jQuery(el);
   let text = jthis.find("blockquote").text();
-  $("textarea").val(text);
+  $("textarea").val(text.replace("<br/>", "\n"));
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
