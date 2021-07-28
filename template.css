@@ -50,15 +50,15 @@ span {
     box-shadow: 0 0 0 0.25rem rgb(145 71 255 / 67%);
 }
 .form-control {
-    border: none;
+    border: none!important;
     color: #fff!important;
     background-color: #464649!important;
 }
 .form-control:focus {
     background-color: #000!important;
     color: #fff!important;
-    box-shadow: none;
-    border-radius: 8px;
+    box-shadow: none!important;
+    border-radius: 8px!important;
     border: 3px solid #a970ff!important;
 }
 label {
