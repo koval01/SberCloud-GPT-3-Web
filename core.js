@@ -61,7 +61,7 @@ function generate_continue() {
   deleteAllCookies();
 
   if (!txt_c.length) {
-    txt_c = "Вчера я";
+    txt_c = "Вчера был прекрасный день"; // example text
     $("textarea").val(txt_c);
   }
 
