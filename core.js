@@ -59,7 +59,7 @@ function generate_continue() {
   const url = "https://api.aicloud.sbercloud.ru/public/v1/public_inference/gpt3/predict";
   const button = $("#generate_continue_button"),
       loader = button.find("span");
-  const clear_button = $(".clear_text_area");
+  const clear_button = $("#clear_text_area");
   
   let text_area = $("textarea");
   let txt_c = text_area.val();
