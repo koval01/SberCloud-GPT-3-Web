@@ -76,3 +76,10 @@ a {
 .a:hover {
     color: #e6e6e6!important;
 }
+.notifyjs-bootstrap-info {
+    color: #ffffff!important;
+    background-color: #28282a!important;
+    border-color: #28282a!important;
+    border-radius: 8px!important;
+    background-image: url()!important;
+}
