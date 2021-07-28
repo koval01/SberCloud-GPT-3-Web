@@ -3,6 +3,7 @@ const notify_config = {
   autoHide: true,
   globalPosition: 'bottom right',
   clickToHide: true,
+  className: 'info',
  };
 
 function deleteAllCookies() {
@@ -27,7 +28,7 @@ function clear_text_area() {
 }
 
 function copy_share_link() {
-  $.notify('Ссылка скопирована!', "info", notify_config);
+  $.notify('Ссылка скопирована!', notify_config);
 }
 
 function select_story(el) {
