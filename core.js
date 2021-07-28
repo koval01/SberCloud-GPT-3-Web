@@ -49,10 +49,13 @@ function generate_continue() {
       },
       success: function (o) {
         display_hint();
+          
         let block = $("#result_continue_block");
+          
         loader.css("display", "none");
         button.prop('disabled', false);
-        block.empty(), block.append(format_result(o));
+        block.prepend(format_result(o));
+          
         document.getElementById('result_continue_block').scrollIntoView({
           behavior: 'smooth'
         });
