@@ -6,6 +6,8 @@ const notify_config = {
   className: 'info',
  }; // Create a general configuration for notifications
 
+var generation_wait_ = false; // wait server response status
+
 function deleteAllCookies() {
   /* A function that deletes absolutely all cookies */
   
@@ -140,6 +142,7 @@ function generate_continue() {
       button.prop('disabled', true);
       text_area.prop("disabled", true);
       clear_button.prop("disabled", true);
+      generation_wait_ = false;
     },
     success: function (o) {
       display_hint();
@@ -156,6 +159,8 @@ function generate_continue() {
       document.getElementById('result_continue_block').scrollIntoView({
         behavior: 'smooth'
       });
+      
+      generation_wait_ = true;
     },
     error: function () {
       loader.css("display", "none"); 
@@ -163,6 +168,8 @@ function generate_continue() {
       button.prop('disabled', false);
       text_area.prop('disabled', false);
       clear_button.prop("disabled", false);
+      
+      generation_wait_ = true;
       
       alert("Извините, но произошла ошибка...");
     },
@@ -206,7 +213,7 @@ function tick_init_() {
     if (!feed_elements_num) {
       feed_bool = true;
     }
-    if (!textarea_value) {
+    if (!textarea_value or generation_wait_) {
       textarea_bool = true;
     }
     
