@@ -31,11 +31,16 @@ function display_hint() {
   hint.css({"display": "inline-block", "margin-top": "0"});
 }
 
+function edit_text_input_(text) {
+  /* function edit user input text */
+  $("textarea").val(text);
+  edit_query_string(text);
+}
+
 function clear_text_area() {
   /*  Clear text input field */
   
-  $("textarea").val("");
-  edit_query_string("");
+  edit_text_input_("");
   $.notify('Поле очищено!', notify_config);
 }
 
@@ -62,7 +67,8 @@ function select_story(el) {
   
   let jthis = jQuery(el);
   let text = jthis.find("blockquote").text();
-  $("textarea").val(text.replace("<br/>", "\n"));
+  
+  edit_text_input_(text.replace("<br/>", "\n"));
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
