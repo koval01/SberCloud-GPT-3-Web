@@ -146,6 +146,28 @@ $('textarea').on('input', function() {
   edit_query_string(text);
 });
 
+function tick_init_() {
+  setInterval(function() {
+    let clear_feed_button = $("#clear_feed_");
+    let clear_textarea_button = $("#clear_text_area");
+    
+    let textarea_value = $("textarea").val();
+    let feed_elements_num = $("#result_continue_block").length;
+    
+    var textarea_bool = false, var feed_bool = false;
+    
+    if (!feed_elements_num) {
+      feed_bool = true;
+    }
+    if (!textarea_value) {
+      textarea_bool = true;
+    }
+    
+    clear_feed_button.prop('disabled', feed_bool);
+    clear_textarea_button.prop('disabled', textarea_bool);
+  }, 100);
+}
+
 $(document).ready(function() {
   let start_text = getParameterByName('start');
   
@@ -153,4 +175,6 @@ $(document).ready(function() {
     $("textarea").val(start_text);
     generate_continue();
   }
+  
+  tick_init_();
 });
