@@ -49,6 +49,11 @@ function select_story(el) {
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
+function clear_feed_() {
+  $("#result_continue_block").empty();
+  $.notify('Записи удалены!', notify_config);
+}
+
 /* copied from awse.us code */
 
 function edit_query_string(data, name="start") {
