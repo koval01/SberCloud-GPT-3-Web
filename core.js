@@ -142,7 +142,7 @@ function generate_continue() {
       button.prop('disabled', true);
       text_area.prop("disabled", true);
       clear_button.prop("disabled", true);
-      generation_wait_ = false;
+      generation_wait_ = true;
     },
     success: function (o) {
       display_hint();
@@ -160,7 +160,7 @@ function generate_continue() {
         behavior: 'smooth'
       });
       
-      generation_wait_ = true;
+      generation_wait_ = false;
     },
     error: function () {
       loader.css("display", "none"); 
@@ -169,7 +169,7 @@ function generate_continue() {
       text_area.prop('disabled', false);
       clear_button.prop("disabled", false);
       
-      generation_wait_ = true;
+      generation_wait_ = false;
       
       alert("Извините, но произошла ошибка...");
     },
