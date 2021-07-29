@@ -51,6 +51,7 @@ function select_story(el) {
 
 function clear_feed_() {
   $("#result_continue_block").empty();
+  window.scrollTo({top: 0, behavior: 'smooth'});
   $.notify('Записи удалены!', notify_config);
 }
 
