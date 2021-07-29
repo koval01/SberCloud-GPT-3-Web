@@ -146,6 +146,16 @@ $('textarea').on('input', function() {
   edit_query_string(text);
 });
 
+function icon_web_set_() {
+  let head_block_ = $("head");
+  const icon_url = "https://www.q-writer.com/static/my_web/images/favicon.ico";
+  
+  head_block_.append(''+
+    `<link rel="shortcut icon" type="image/x-icon" href="${icon_url}"/>\n`+
+    `<link rel="icon" type="image/x-icon" href="${icon_url}"/>`
+  );
+}
+
 function tick_init_() {
   setInterval(function() {
     let clear_feed_button = $("#clear_feed_");
