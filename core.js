@@ -192,8 +192,11 @@ function tick_init_() {
   /* Create an interval to check the elements of the site. */
   
   setInterval(function() {
+    const d_ = "disabled";
+    
     let clear_feed_button = $("#clear_feed_");
     let clear_textarea_button = $("#clear_text_area");
+    let share_button_ = $("#copy_share_link");
     
     let textarea_value = $("textarea").val();
     let feed_elements_num = $("#result_continue_block").length;
@@ -207,8 +210,10 @@ function tick_init_() {
       textarea_bool = true;
     }
     
-    clear_feed_button.prop('disabled', feed_bool);
-    clear_textarea_button.prop('disabled', textarea_bool);
+    clear_feed_button.prop(d_, feed_bool);
+    clear_textarea_button.prop(d_, textarea_bool);
+    share_button_.prop(d_, textarea_bool);
+    
   }, 100);
 }
 
