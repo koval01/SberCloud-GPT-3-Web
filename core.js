@@ -83,6 +83,8 @@ function edit_query_string(data, name="start") {
 }
 
 function getParameterByName(name, url = window.location.href) {
+  /* Get specific address settings */
+  
   try {
     name = name.replace(/[\[\]]/g, '\\$&');
     var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -98,12 +100,19 @@ function getParameterByName(name, url = window.location.href) {
 /* finish awse.us code 👨‍💻 */
 
 function format_result(server_response) {
+  /* Bring the text to the desired form */
+  
   let text = (server_response.predictions).replace("\n", "<br/>");
   let html_result = `<figure class="border-bottom" onclick="select_story(this)"><blockquote class="blockquote"><b>${text}</b></blockquote><figcaption class="blockquote-footer">SberCloud</figcaption></figure>`;
   return html_result;
 }
 
 function generate_continue() {
+  /*
+    A comprehensive feature that sends a request to a server with
+    a neural network model, as well as managing the basic elements.
+  */
+  
   const url = "https://api.aicloud.sbercloud.ru/public/v1/public_inference/gpt3/predict";
   const button = $("#generate_continue_button"),
       loader = button.find("span");
@@ -161,11 +170,15 @@ function generate_continue() {
 }
 
 $('textarea').on('input', function() {
+  /* User typing event, and writing text to the start option */
+  
   let text = $("textarea").val();
   edit_query_string(text);
 });
 
 function icon_web_set_() {
+  /* Installing the site icon */
+  
   let head_block_ = $("head");
   const icon_url = "https://www.q-writer.com/static/my_web/images/favicon.ico";
   
@@ -176,6 +189,8 @@ function icon_web_set_() {
 }
 
 function tick_init_() {
+  /* Create an interval to check the elements of the site. */
+  
   setInterval(function() {
     let clear_feed_button = $("#clear_feed_");
     let clear_textarea_button = $("#clear_text_area");
@@ -198,6 +213,8 @@ function tick_init_() {
 }
 
 $(document).ready(function() {
+  /* The usual JQuery function that performs tasks after the page loads */
+  
   let start_text = getParameterByName('start');
   
   if(start_text) {
