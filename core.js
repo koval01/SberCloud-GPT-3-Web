@@ -4,9 +4,11 @@ const notify_config = {
   globalPosition: 'bottom right',
   clickToHide: true,
   className: 'info',
- };
+ }; // Create a general configuration for notifications
 
 function deleteAllCookies() {
+  /* A function that deletes absolutely all cookies */
+  
   var cookies = document.cookie.split(";");
 
   for (var i = 0; i < cookies.length; i++) {
@@ -18,17 +20,26 @@ function deleteAllCookies() {
 }
 
 function display_hint() {
+  /* 
+    The function that calls the tooltip is displayed. 
+    Hint that by clicking on the entry it will be moved to the text field. 
+  */
+  
   let hint = $("#prompt_select_story");
   hint.css({"display": "inline-block", "margin-top": "0"});
 }
 
 function clear_text_area() {
+  /*  Clear text input field */
+  
   $("textarea").val("");
   edit_query_string("");
   $.notify('Поле очищено!', notify_config);
 }
 
 function copyToClipboard(text) {
+  /* A common feature for copying a term to the client's clipboard */
+  
   var input = document.body.appendChild(document.createElement("input"));
   input.value = text;
   input.focus();
@@ -38,11 +49,15 @@ function copyToClipboard(text) {
 }
 
 function copy_share_link() {
+  /* Copy link from address bar */
+  
   copyToClipboard(window.location.href);
   $.notify('Ссылка скопирована!', notify_config);
 }
 
 function select_story(el) {
+  /* Select a story and move it to the text box */
+  
   let jthis = jQuery(el);
   let text = jthis.find("blockquote").text();
   $("textarea").val(text.replace("<br/>", "\n"));
@@ -50,6 +65,8 @@ function select_story(el) {
 }
 
 function clear_feed_() {
+  /* Delete all entries created by the user */
+  
   $("#result_continue_block").empty();
   window.scrollTo({top: 0, behavior: 'smooth'});
   $.notify('Записи удалены!', notify_config);
@@ -58,6 +75,8 @@ function clear_feed_() {
 /* copied from awse.us code */
 
 function edit_query_string(data, name="start") {
+  /* Edit parameters in the address bar in real time */
+  
   var queryParams = new URLSearchParams(window.location.search);
   queryParams.set(name, data);
   history.replaceState(null, null, "?" + queryParams.toString());
