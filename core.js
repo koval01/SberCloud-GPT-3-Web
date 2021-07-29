@@ -243,5 +243,5 @@ $(document).ready(function() {
   tick_init_();
   icon_web_set_();
   
-  autosize(document.getElementById("generate_textarea_"));
+  // autosize(document.getElementById("generate_textarea_"));
 });
