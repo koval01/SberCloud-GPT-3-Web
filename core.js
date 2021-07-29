@@ -213,7 +213,7 @@ function tick_init_() {
     if (!feed_elements_num) {
       feed_bool = true;
     }
-    if (!textarea_value or generation_wait_) {
+    if (!textarea_value || generation_wait_) {
       textarea_bool = true;
     }
     
