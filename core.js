@@ -187,4 +187,5 @@ $(document).ready(function() {
   }
   
   tick_init_();
+  icon_web_set_();
 });
