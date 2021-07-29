@@ -154,7 +154,7 @@ function tick_init_() {
     let textarea_value = $("textarea").val();
     let feed_elements_num = $("#result_continue_block").length;
     
-    var textarea_bool = false, var feed_bool = false;
+    var textarea_bool = false, feed_bool = false;
     
     if (!feed_elements_num) {
       feed_bool = true;
